@@ -6,7 +6,6 @@ $(function(){
 	globalInterval();
 	function changeSlide() {
 		carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
-		changePagination();
 	}
 	function moveFirstSlide() {
 		var firstItem = carouselList.find("li:first");
@@ -25,7 +24,6 @@ $(function(){
 	function slideReturn() {
 		clearInterval(intervalId);
 		moveFirstSlideReturn();
-		changePagination();
 		carouselList.animate({'marginLeft': 0}, 500, globalInterval);
 	};
 
@@ -37,9 +35,3 @@ $(function(){
 	};
 
 });
-
-
-
-
-
-
