@@ -18,20 +18,16 @@ $(function(){
 		changeSlide();
 		globalInterval();
 	});
-
-
 	$('#arrowLeft').click(slideReturn);
 	function slideReturn() {
 		clearInterval(intervalId);
 		moveFirstSlideReturn();
 		carouselList.animate({'marginLeft': 0}, 500, globalInterval);
 	};
-
 	function moveFirstSlideReturn() {
 		var firstItem = carouselList.find("li:first");
 		var lastItem = carouselList.find("li:last");
 		firstItem.before(lastItem);
 		carouselList.css({marginLeft:-400});
 	};
-
 });
